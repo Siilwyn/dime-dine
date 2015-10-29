@@ -1,0 +1,17 @@
+//
+    mixin recipe-preview(recipe)
+    section.relative
+        a(class='white' href='/recipe/' + recipe.id)
+            h3(class='absolute bottom-0 p1 bg-black')= recipe.recipeName
+            h4(class='absolute bottom-1 p1 bg-black')= recipe.discount + ' korting'
+            img(class='recipe-preview-image' src=recipe.smallImageUrls[0])
+
+mixin recipe-preview(recipe)
+    section(class='recipe-preview')
+        a(href='/recipe/' + recipe.id)
+            img(class='recipe-preview-image' src=recipe.smallImageUrls[0])
+            h3(class='recipe-preview-title m0 ml2')= recipe.recipeName
+            p(class='recipe-preview-discount')= recipe.discount
+            p()= recipe.price
+            img(class='recipe-preview-supermarket' src='/images/supermarkets/#{recipe.supermarket}.png' alt=recipe.supermarket)
+            p()= recipe.healthiness

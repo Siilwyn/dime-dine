@@ -1,0 +1,13 @@
+mixin supermarket-option(name, slug)
+    div(class='supermarket-option' data-supermarket-option)
+        input(id=slug type='checkbox')
+        label(for=slug)
+            img(src='/images/supermarkets/#{slug}.png' alt=name)
+
+form(class='supermarket-selection')
+    +supermarket-option('Albert Heijn', 'albert-heijn')
+    +supermarket-option('Jumbo', 'jumbo')
+    +supermarket-option('Aldi', 'aldi')
+    +supermarket-option('Lidl', 'lidl')
+    +supermarket-option('Plus', 'plus')
+    +supermarket-option('Dirk', 'dirk')

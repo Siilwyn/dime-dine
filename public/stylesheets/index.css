@@ -1,0 +1,23 @@
+/* Basscss */
+@import 'basscss-base-reset';
+@import 'basscss-base-typography';
+@import 'basscss-background-colors';
+@import 'basscss-btn';
+@import 'basscss-btn-outline';
+@import 'basscss-colors';
+@import 'basscss-color-base';
+@import 'basscss-grid';
+@import 'basscss-positions';
+@import 'basscss-white-space';
+@import 'flex-object';
+
+@import 'basscss-utility-layout';
+@import 'basscss-utility-typography';
+
+/* Partials */
+@import '../../partials/core-styling/colors';
+@import '../../partials/core-styling/layout';
+@import '../../partials/core-styling/typography';
+@import '../../partials/header/header';
+@import '../../partials/supermarket-selection/supermarket-selection';
+@import '../../partials/recipe-preview/recipe-preview';

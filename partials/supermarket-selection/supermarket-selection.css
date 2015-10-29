@@ -1,0 +1,37 @@
+.supermarket-selection {
+    display: flex;
+    justify-content: center;
+    background: var(--white);
+    border-bottom: 2px solid var(--silver);
+    width: 100%;
+}
+
+.supermarket-option {
+    display: inline-block;
+    margin: 1em 0.5em 0.5em 0.5em;
+    width: 3.5em;
+}
+
+.supermarket-option label {
+    cursor:pointer;
+    visibility: hidden;
+    width: 0;
+}
+
+.supermarket-option label img {
+    cursor: pointer;
+    visibility: visible;
+}
+
+.supermarket-option input {
+    display: none;
+}
+
+.supermarket-option input + label img {
+    opacity: 0.4;
+    transition: opacity 0.7s;
+}
+
+.supermarket-option input:checked + label img {
+    opacity: 1;
+}

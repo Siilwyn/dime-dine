@@ -1,0 +1,37 @@
+:root {
+    --font-family: 'Open Sans';
+
+    --heading-font-family: Museo;
+    --heading-font-weight: 300;
+    --h1: 2.5em;
+    --h2: 2.369em;
+    --h3: 1.777em;
+    --h4: 1.333em;
+}
+
+@font-face {
+	font-family: Museo;
+    font-weight: 300;
+	font-style: normal;
+    src: url("/fonts/Museo-300-Regular.woff") format("woff"),
+         url("/fonts/Museo-300-Regular.ttf") format("truetype"),
+         url("/fonts/Museo-300-Regular.svg") format("svg");
+}
+
+@font-face {
+	font-family: Museo;
+    font-weight: 500;
+	font-style: normal;
+    src: url("/fonts/Museo-500-Regular.woff") format("woff"),
+         url("/fonts/Museo-500-Regular.ttf") format("truetype"),
+         url("/fonts/Museo-500-Regular.svg") format("svg");
+}
+
+@font-face {
+	font-family: Museo;
+    font-weight: 700;
+	font-style: normal;
+    src: url("/fonts/Museo-700-Regular.woff") format("woff"),
+         url("/fonts/Museo-700-Regular.ttf") format("truetype"),
+         url("/fonts/Museo-700-Regular.svg") format("svg");
+}

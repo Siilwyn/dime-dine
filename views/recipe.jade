@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    img(src=recipe.images[0].hostedLargeUrl)
+    ul
+        li= recipe.name
+        li= recipe.totalTime
+        li= recipe.numberOfServings
+        li
+            ul
+                each ingredient in recipe.ingredientLines
+                    li= ingredient

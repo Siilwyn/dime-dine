@@ -1,0 +1,9 @@
+extends layout
+
+include ../partials/recipe-preview/recipe-preview.jade
+block content
+    main
+        include ../partials/supermarket-selection/supermarket-selection.jade
+
+        each recipe in recipes
+            +recipe-preview(recipe)
