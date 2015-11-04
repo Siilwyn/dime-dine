@@ -1,11 +1,49 @@
+/* leaking style */
+.recipe-overview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .recipe-preview {
-    box-shadow: 0 0 8px 0 var(--gray);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
     border-radius: 4px;
     background: var(--white);
     max-width: 35em;
     margin: 2em;
     position: relative;
     overflow: hidden;
+    flex-basis: 100%;
+}
+
+.recipe-preview-disabled {
+    display: none;
+}
+
+/* Rough day */
+.recipe-preview-link {
+    text-decoration: none !important;
+}
+
+.recipe-preview-description {
+    padding: 1em 1em 0.5em;
+}
+
+.recipe-preview-description ul {
+    padding: 0;
+    list-style: none;
+}
+
+.recipe-preview-description ul li {
+    display: inline;
+    padding: 0 1em;
+    color: var(--black);
+    border-left: 1px solid var(--gray);
+}
+
+.recipe-preview-description ul li:first-child {
+    padding-left: 0;
+    border-left: 0;
 }
 
 .recipe-preview-image {
@@ -16,49 +54,36 @@
 .recipe-preview-title {
     color: var(--black);
     line-height: 2em;
-/*
-  background: rgba(157, 187, 63, 0.85);
-  padding: 3.5% 0 2.5% 0;
-  color: white;
-  font-family: 'Roboto Condensed', sans-serif;
-  text-transform: uppercase;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-*/
+    margin: 0;
 }
 
 .recipe-preview-discount {
     position: absolute;
-    top: 25px;
-    right: -50px;
-    width: 200px;
+    top: 1.5625em;
+    right: -3.125em;
+    width: 12.5em;
     text-align: center;
-    line-height: 50px;
-    letter-spacing: 1px;
-    background: var(--orange);
+    font-weight: bold;
+    line-height: 3.125em;
+    letter-spacing: 0.0625em;
+    background: var(--red);
     color: var(--white);
     transform: rotate(45deg);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     z-index: 1;
-
-/*
-    position: absolute;
-    top: -0.8em;
-    right: -8.3em;
-    width: 20em;
-    text-align: center;
-    line-height: 50px;
-    letter-spacing: 1px;
-    background: #FF851B none repeat scroll 0% 0%;
-    color: #FFF;
-    transform: rotate(45deg);
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
-    height: 5em;
-    line-height: 6em;
-*/
 }
 
 .recipe-preview-supermarket {
-    width: 3em;
+    position: absolute;
+    bottom: -1rem;
+    left: 1rem;
+    width: 4em;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.recipe-preview-health {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 6em;
 }

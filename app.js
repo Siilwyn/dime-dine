@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require('express');
 var path = require('path');
 var logger = require('morgan');
@@ -5,7 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var recipe = require('./routes/recipe');
-var sandbox = require('./routes/sandbox');
+var preferences = require('./routes/preferences');
 
 var app = express();
 
@@ -20,7 +22,7 @@ app.use(cookieParser());
 app.use(express.static('./public'));
 
 app.use('/', recipe);
-app.use('/sandbox', sandbox);
+app.use('/preferences', preferences);
 
 // Catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,0 +1,28 @@
+mixin ingredient-option(name, slug, location, type)
+    div(class='ingredient-option' data-ingredient-option)
+        input(id=slug type='checkbox' checked)
+        label(for=slug)
+            img(src='/images/#{location}/#{slug}.#{type}' alt=name)
+
+section(class='hero')
+    h2(class='hero-header') Lekker gezond eten kan ook voor minder
+
+form(class='preferences')
+    label(for='main-ingredient'): h4.m0 Hoofd ingredienten
+    p(class='gray') Kies wat je wel en niet wilt eten.
+    div(id='main-ingredient' class='ingredient-selection')
+        +ingredient-option('Pasta', 'pasta', 'ingredients', 'jpg')
+        +ingredient-option('Vlees', 'meat', 'ingredients', 'jpg')
+        +ingredient-option('Vega', 'vega', 'ingredients', 'jpg')
+        +ingredient-option('Rijst', 'rice', 'ingredients', 'jpg')
+        +ingredient-option('Vis', 'fish', 'ingredients', 'jpg')
+
+    label(for='price'): h4.m0 Prijs per persoon
+    div(id='price' data-noui-slider-price)
+    label(for='cooking-time'): h4.m0 Bereidingstijd
+    div(id='cooking-time' data-noui-slider-time)
+    label(for='amount-pp'): h4.m0 Aantal personen
+    div(id='amount-pp' data-noui-slider-persons)
+
+
+    a(href='/' class='mt3 btn btn-outline mb4 blue center') Vind recepten

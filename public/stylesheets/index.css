@@ -9,6 +9,7 @@
 @import 'basscss-grid';
 @import 'basscss-positions';
 @import 'basscss-white-space';
+@import 'basscss-input-range';
 @import 'flex-object';
 
 @import 'basscss-utility-layout';
@@ -18,6 +19,16 @@
 @import '../../partials/core-styling/colors';
 @import '../../partials/core-styling/layout';
 @import '../../partials/core-styling/typography';
+@import '../../partials/footer/footer';
 @import '../../partials/header/header';
+@import '../../partials/preferences/preferences';
 @import '../../partials/supermarket-selection/supermarket-selection';
 @import '../../partials/recipe-preview/recipe-preview';
+
+/* Modules */
+@import '../../partials/preferences/nouislider';
+@import '../../partials/preferences/nouislider.pips';
+@import '../../partials/preferences/nouislider.tooltips';
+
+/* Views */
+@import '../../views/recipe';

@@ -1,0 +1,11 @@
+footer {
+    margin: 1em 0 0.5em 1em;
+    bottom: 0;
+}
+
+footer img {
+    width: 5em;
+    opacity: 0.5;
+    display: inline;
+    margin-right: 1em;
+}

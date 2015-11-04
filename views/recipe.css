@@ -1,0 +1,53 @@
+.recipe-image {
+    width: 100%;
+    display: block;
+}
+
+.recipe-section {
+    background: var(--white);
+    padding: 1em;
+}
+
+.recipe-keypoints {
+    display: flex;
+}
+
+.recipe-key-point {
+    flex-basis: 33%;
+    border-right: 1px solid var(--silver);
+    text-align: center;
+    font-style: oblique;
+    padding: 2em 0;
+}
+
+.recipe-key-point:last-child {
+    border: 0;
+}
+
+.recipe-key-point dt {
+    color: var(--gray);
+}
+
+.recipe-key-point dd {
+    font-size: var(--h3);
+    font-family: Museo;
+    font-weight: bold;
+    margin: 0;
+}
+
+.recipe-ingredients li {
+    padding: 1em 0;
+    font-size: 110%;
+    border-bottom: 1px solid var(--silver);
+    font-family: 'Open Sans Light', 'Open Sans';
+    position: relative;
+    width: 100%
+}
+
+.recipe-discount {
+    font-weight: bold;
+    position: absolute;
+    right: 1em;
+    font-size: 110%;
+    font-family: 'Open Sans';
+}

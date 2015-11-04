@@ -1,17 +1,14 @@
-//
-    mixin recipe-preview(recipe)
-    section.relative
-        a(class='white' href='/recipe/' + recipe.id)
-            h3(class='absolute bottom-0 p1 bg-black')= recipe.recipeName
-            h4(class='absolute bottom-1 p1 bg-black')= recipe.discount + ' korting'
-            img(class='recipe-preview-image' src=recipe.smallImageUrls[0])
-
 mixin recipe-preview(recipe)
-    section(class='recipe-preview')
-        a(href='/recipe/' + recipe.id)
-            img(class='recipe-preview-image' src=recipe.smallImageUrls[0])
-            h3(class='recipe-preview-title m0 ml2')= recipe.recipeName
+    section(class='recipe-preview' data-recipe-preview=recipe.supermarket)
+        a(href='/recipe/' + recipe.id class='recipe-preview-link')
+            div.relative
+                img(class='recipe-preview-image' src=recipe.smallImageUrls[0])
+                img(class='recipe-preview-supermarket' src='/images/supermarkets/#{recipe.supermarket}.png' alt=recipe.supermarket)
+                img(class='recipe-preview-health' src='/images/healthiness.png')
             p(class='recipe-preview-discount')= recipe.discount
-            p()= recipe.price
-            img(class='recipe-preview-supermarket' src='/images/supermarkets/#{recipe.supermarket}.png' alt=recipe.supermarket)
-            p()= recipe.healthiness
+
+            div(class='recipe-preview-description')
+                h3(class='recipe-preview-title')= recipe.recipeName
+                ul
+                    li= recipe.price
+                    li 4 personen

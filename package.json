@@ -32,6 +32,7 @@
     "basscss-colors": "^2.0.0",
     "basscss-defaults": "^2.1.1",
     "basscss-grid": "^1.0.3",
+    "basscss-input-range": "^1.1.5",
     "basscss-positions": "^1.0.4",
     "basscss-utility-layout": "^2.0.3",
     "basscss-utility-typography": "^2.0.0",
@@ -39,6 +40,7 @@
     "cssnext": "^1.8.4",
     "flex-object": "^2.0.2",
     "nodemon": "^1.8.0",
+    "nouislider": "github:leongersen/noUiSlider",
     "parallelshell": "^2.0.0",
     "uglify-js": "^2.5.0"
   }

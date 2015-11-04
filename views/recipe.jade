@@ -1,12 +1,38 @@
 extends layout
 
 block content
-    img(src=recipe.images[0].hostedLargeUrl)
-    ul
-        li= recipe.name
-        li= recipe.totalTime
-        li= recipe.numberOfServings
-        li
-            ul
-                each ingredient in recipe.ingredientLines
+    img(class='recipe-image' src=recipe.images[0].hostedLargeUrl)
+    div(class='recipe-section')
+        h2(class='mt0 mb3')= recipe.name
+        dl(class='recipe-keypoints')
+            div(class='recipe-key-point')
+                dd= recipe.totalTime
+                dt Recept tijd
+            div(class='recipe-key-point' style='padding: 0;')
+                dd: img(src='/images/healthiness.png' width='150')
+            div(class='recipe-key-point')
+                dd= recipe.calories
+                dt Calorieën
+
+    div(class='recipe-section mt3')
+        h2(class='ml1') Ingrediënten
+        ul(class='recipe-ingredients')
+            each ingredient in recipe.ingredientLines
+                if ingredient.discount
+                    li(class='red bold')= ingredient.description
+                        span(class='recipe-discount')= '-' + ingredient.discount
+                else
                     li= ingredient
+
+    div(class='recipe-section mt3')
+        h2(class='ml1') Bereiding
+        article(class='m2')
+            | Step 1<br>
+            | Place the olive oil, chopped onion, the peeled tomatoes broken into chunks and the chopped garlic in a saucepan and cook over low heat until the tomato start to break down. Then, add the tuna and season with a little pepper. Stir and simmer for 5 minutes, stirring occasionally. Turn off the heat and sprinkle with chopped parsley.
+            | <br><br>
+            | Step 2<br>
+            | Preheat the oven to 180ºC / (350ºF).
+            | Step 3<br><br>
+            | Grease mini pie pans with margarine. Roll out the shortcrust pastry over a table, cut circles with the help of a glass cup and line the pie pans with the dough (prick the bottom with a fork). Pour small portions of the tuna mixtureMini tuna pies | Food From Portugal and cover with small dough circles. Gently press the edges with a fork to connect the dough. Brush on top with beaten egg yolkMini tuna pies | Food From Portugal and bake about 15 to 20 minutes until golden brown.<br><br>
+            | Step 4<br>
+            | Remove from oven, unmold and serve.
