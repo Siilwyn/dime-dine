@@ -1360,5 +1360,7 @@ box-sizing: border-box;
 .recipe-discount {
     font-weight: bold;
     position: absolute;
-    right: 0;
+    right: 1em;
+    font-size: 110%;
+    font-family: 'Open Sans';
 }
